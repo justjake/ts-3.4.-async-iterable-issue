@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "tsc && cat example.ts && node ./build/example.js"
+  },
   "dependencies": {
     "typescript": "^3.4.3"
   }
