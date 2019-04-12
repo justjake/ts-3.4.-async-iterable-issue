@@ -1,0 +1,21 @@
+{
+	"version": "2.3.4",
+	"compilerOptions": {
+		"allowJs": true,
+		"strictNullChecks": true,
+		"noImplicitThis": true,
+		"allowSyntheticDefaultImports": false,
+		"removeComments": true,
+		"downlevelIteration": true,
+		"sourceMap": true,
+		"jsx": "react",
+		"target": "es5",
+		"lib": ["es6", "es2017", "dom", "scripthost", "esnext.asynciterable"],
+		"incremental": true,
+		"outDir": "./build/"
+	},
+	"include": ["*.ts"],
+	"exclude": [
+		"node_modules",
+	]
+}
