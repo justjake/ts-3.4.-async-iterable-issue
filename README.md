@@ -7,7 +7,14 @@ npm start
 
 ---
 
-I hit some runtime errors after following Typescript's iterable types. Specifically, the return type of `await iterable.next()` should include `| { done: true, value: undefined }`.
+I hit some runtime errors after following Typescript's iterable types.
+
+At runtime, a call to `await iterable.next()` will return `{ done: true, value: undefined }`
+for a complete `async * function` generator. However, the return type for `async * function` generator,
+`AsyncIterableIterator<T>`, does not allow for `value: undefined`.
+
+The return type of `await iterable.next()` should include `| { done: true,
+value: undefined }`.
 
 Here's a demonstration of the issue:
 
